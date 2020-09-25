@@ -13,13 +13,14 @@ int n, a[MAX_N];
 
 struct node{
     int sum, mult , min, max;
-}segmentTree[MAX_N*2];
+}segmentTree[MAX_N*4];
 
 void init(int inicio, int final, int nodoActual) { 
     if( inicio == final ) {
         segmentTree[nodoActual].max = a[inicio];
         segmentTree[nodoActual].min = a[inicio];
         segmentTree[nodoActual].sum = a[inicio];
+        segmentTree[nodoActual].mult = a[inicio];
     } else {
         int mid = (inicio + final) / 2; 
         int nodoIzquierdo = 2 * nodoActual + 1; 
@@ -30,6 +31,7 @@ void init(int inicio, int final, int nodoActual) {
         init(mid+1, final, nodoDerecho);
 
         segmentTree[nodoActual].sum = segmentTree[nodoIzquierdo].sum + segmentTree[nodoDerecho].sum;
+        segmentTree[nodoActual].mult = segmentTree[nodoIzquierdo].mult * segmentTree[nodoDerecho].mult;
         segmentTree[nodoActual].max = max(segmentTree[nodoIzquierdo].max,  segmentTree[nodoDerecho].max);
         segmentTree[nodoActual].min = min(segmentTree[nodoIzquierdo].min, segmentTree[nodoDerecho].min);
     } 
@@ -37,7 +39,7 @@ void init(int inicio, int final, int nodoActual) {
 
 
 node query(int inicio, int final, int nodoActual, int izquierda, int derecha ) {
-    if(inicio >= izquierda && final <= derecha ) {
+    if(izquierda<=inicio && final <= derecha ) {
         return segmentTree[nodoActual];
     }
     
@@ -54,6 +56,7 @@ node query(int inicio, int final, int nodoActual, int izquierda, int derecha ) {
         node maxDerecho   = query(mid+1, final, nodoDerecho,izquierda,derecha);
 
         node result ; 
+        result.mult = maxIzquierdo.mult *  maxDerecho.mult;
         result.max = max(maxIzquierdo.max, maxDerecho.max);
         result.min = min(maxIzquierdo.min, maxDerecho.min); 
         return result;
@@ -61,7 +64,7 @@ node query(int inicio, int final, int nodoActual, int izquierda, int derecha ) {
 }
 
 void update(int inicio, int final, int nodoActual, int posicion, int valor ) {
-    if(posicion < inicio && posicion > final ) {
+    if(posicion < inicio || posicion > final ) {
         return ;
     }
 
@@ -69,6 +72,7 @@ void update(int inicio, int final, int nodoActual, int posicion, int valor ) {
         segmentTree[nodoActual].max = valor;
         segmentTree[nodoActual].min = valor;
         segmentTree[nodoActual].sum = valor;
+        segmentTree[nodoActual].mult = valor;
     } else { 
 
         int mid = (inicio + final ) / 2; 
@@ -80,6 +84,7 @@ void update(int inicio, int final, int nodoActual, int posicion, int valor ) {
         update(mid+1, final, nodoDerecho, posicion, valor );
 
         segmentTree[nodoActual].sum = segmentTree[nodoIzquierdo].sum + segmentTree[nodoDerecho].sum;
+        segmentTree[nodoActual].mult = segmentTree[nodoIzquierdo].mult * segmentTree[nodoDerecho].mult;
         segmentTree[nodoActual].max = max(segmentTree[nodoIzquierdo].max,  segmentTree[nodoDerecho].max);
         segmentTree[nodoActual].min = min(segmentTree[nodoIzquierdo].min, segmentTree[nodoDerecho].min);
 
@@ -88,34 +93,44 @@ void update(int inicio, int final, int nodoActual, int posicion, int valor ) {
 
 int main() {
     input;
-    cin>>n;
-    for(int i = 0; i < n; i++) {
-        cin>>a[i];
+    output;
+    int queries; 
+    while(cin>>n>>queries) {
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+            if(a[i]>0) {
+                a[i]=1;
+            }else if(a[i]<0){
+                a[i]=-1;
+            }
+        }
+        init(0,n-1,0);
+        for(int i=0;i<queries;i++) {
+            char querie; 
+            cin>>querie; 
+            if('C' == querie) {
+                int posicion, valor; 
+                cin>>posicion>>valor; 
+                if(valor>0) {
+                    valor = 1;
+                }else if(valor<0){
+                    valor = -1;
+                }
+                update(0,n-1,0,posicion-1, valor);
+            } else {
+                int izquierda,derecha; 
+                cin>>izquierda>>derecha;
+                int result = query(0,n-1,0,izquierda-1,derecha-1).mult;
+                if(result == 0)
+                    cout<<'0';
+                else if( result >0) {
+                    cout<<'+';
+                }else {
+                    cout<<'-';
+                }
+            }
+        }
+        cout<<endl;
     }
-    // Inicializar Segment Tree 
-    init(0,n -1, 0);    
-
-    for(int i=0;i<2*n;i++) {
-        cout<<"[ "<<segmentTree[i].sum<<" ]";
-    }
-    cout<<endl;
-    int queries;
-    cin>> queries; 
-    for(int i = 0 ;i <queries ; i++) {
-        int izquierda, derecha; 
-        cin>> izquierda >> derecha; 
-        cout<<"El maximo de "<<izquierda<<" y "<< derecha << " es: "<<query(0,n-1,0,izquierda,derecha).max<<endl;
-    }
-
-    update(0,n-1,0,5,8);
-    cout<<"El maximo de "<<0<<" y "<< 6 << " es: "<<query(0,n-1,0,0,6).max<<endl;
-
-
-
-
-    /* if('max' == consulta) {
-
-    }*/
     return 0;
 }
-
