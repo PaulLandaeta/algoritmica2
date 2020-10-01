@@ -3,7 +3,7 @@
 #define output freopen("out.txt", "w", stdout)
 using namespace std;  
 
-long long dp[12][2][99];
+long long dp[12][2][83];
 int k; 
 string toString(long long currentNumber) {
     string number = "";
@@ -47,7 +47,7 @@ long long solveDP(string & number, int index, bool tight, int remainder) {
 }
 int main() {
     input;
-    int a,b,k;
+    int a,b;
     cin>>a>>b>>k;
     
     string numberA = toString(a-1);
@@ -55,7 +55,6 @@ int main() {
 
     memset(dp,-1, sizeof(dp));
     long long solB = solveDP(numberB,0,1,0);
-    
     memset(dp,-1, sizeof(dp));
     long long solA = solveDP(numberA,0,1,0); 
 
