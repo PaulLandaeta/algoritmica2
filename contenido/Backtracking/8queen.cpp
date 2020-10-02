@@ -24,21 +24,22 @@ void solve(int column) { // column es la columna actual
         }
         cout<<endl;
         return;
-    }
-    for(int row=0;row<8;row++) {
+    }   // N 
+    for(int row=0;row<8;row++) {   // N 
         // como se si debo elimnar 
 
-        if(isValid(row,column)){  // en ese cuadro 
+        if(isValid(row,column)){  // en ese cuadro   N 
             
-            rows[column] = row;    // r es la fila donde estoy guardando la reina;
+            rows[column] = row;    // r es la fila donde estoy guardando la reina;//  2 
             //cout<<"fila "<<rows[column]<<endl;
             //cout<<row<<' '<< column<<endl;
-            solve(column + 1);  // OJO nunca mandar column++ o column--  
+            solve(column + 1);  // OJO nunca mandar column++ o column--    T(n-1)   0 1 2 3 4 5 6 7 
         }
     }
 }
+T(n) =MAX(N,  (N+1)* (N+2+T(N-1)))
 
-
+T(n) =  (N+1)* (N+2+T(N-1))
 
 int main () {
     solve(0);
