@@ -45,9 +45,10 @@ int main() {
     }
     int manzanos = 0;
     for (int i=1;i<=n;i++) {
-        if(parents[i] == i){
-            manzanos++;
+        if(parents[i] == padre[Paul]){
+            if(i != paul)
+                cout<<i<<endl;
         }
     }
-    cout<<manzanos<<endl;
+   // cout<<manzanos<<endl;
 }
