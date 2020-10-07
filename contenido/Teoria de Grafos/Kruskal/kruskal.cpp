@@ -42,7 +42,7 @@ int sameComponent2(int nodeA,int nodeB) {
     return nodeA == nodeB;
 }
 
-void unionRango(int x,int y) { 
+void unionRango(int x,int y) { cd 
     int xRaiz = find(x);
     int yRaiz = find(y);
     if(rango[xRaiz] > rango[yRaiz]) {
