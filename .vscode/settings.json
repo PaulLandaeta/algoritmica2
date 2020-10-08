@@ -7,7 +7,8 @@
         "limits": "cpp",
         "ranges": "cpp",
         "valarray": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "ostream": "cpp"
     },
     "cSpell.language": ",es"
 }
