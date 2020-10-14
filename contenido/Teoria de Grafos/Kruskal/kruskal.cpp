@@ -58,7 +58,7 @@ void unionRango(int x,int y) {
 struct Arista{ 
     int origen;
     int destino; 
-    int peso; 
+    double peso; 
     Arista(){}
 
     bool operator<(const Arista &a) const {
@@ -69,18 +69,17 @@ struct Arista{
 Arista MST[MAX_N]; // n-1 aristas 
 
 
-void kruskal(int nroNodos, int nroAristas) {
+double kruskal(int nroNodos, int nroAristas) {
     
-    int origen, destino, peso;
+    int origen, destino;
+    double peso;
 
-    int total = 0;
+    double total = 0;
 
     int numAristasArbol = 0;
 
     init(); // Iniciar el union Find 
     
-
-
     sort(aristas,aristas + nroAristas);  // la arista con menor peso hasta la de mayor peso 
 
     for (int i = 0; i < nroAristas; i++)
@@ -95,31 +94,44 @@ void kruskal(int nroNodos, int nroAristas) {
             unionRango(origen,destino);
         }
     }
+    return total;
+}
 
-    if(numAristasArbol != nroNodos - 1 ) {
-        cout<<"no existe un arbol de expansion minima";
-    } else {
-        for(int i=0;i < nroNodos-1;i++) {
-            cout<<MST[i].origen<<" ";
-            cout<<MST[i].destino<<" ";
-            cout<<MST[i].peso<<endl;
-        }
-        cout<<total<<endl;
-    }
 
+double distancia(double pointX1,double pointY1, double pointX2, double pointY2) {
+    // sqrt((x1-x2)^2 + (y1-y2)^2)
+    double x = pointX2 - pointX1;
+    double y = pointY2 - pointY1
+
+    return sqrt(x*x+y*y); 
 }
 
 
 int main(){
     input;
-    cin>>N>>E;
-    for( int i = 0 ; i < E ; ++i ){
-        // scanf("%d %d %d" , &aristas[ i ].origen , &aristas[ i ].destino , &aristas[ i ].peso );
-        cin>>aristas[i].origen>>aristas[i].destino>>aristas[i].peso;
+
+    int tCases; 
+    cin>>tCases; 
+    while(tCases--) {
+
+        cin>>N;
+        double points[2][N];
+        for( int i = 0 ; i < N ; ++i ){
+            cin>>points[0][i]>>points[1][i];
+        }
+        int nroVertice=0; 
+        for( int i=0;i<N-1;i++) {
+            for(int j=i+1;j<N;j++) {
+            aristas[nroVertice].origen = i;
+            aristas[nroVertice].destino = j;
+            aristas[nroVertice].peso = distancia(points[0][i],points[1][i],points[0][j],points[1][j]); 
+            nroVertice++;
+            }
+        }
+        double total = kruskal(N,nroVertice);
+
+        cout<<total<<endl;
     }
-        
-    
-    kruskal(N,E);
 
     return 0;
 }
