@@ -1,23 +1,24 @@
-# Digit
-![Dividir los problemas en subproblemas](https://github.com/AleS900/prueba/blob/master/assets/digit.png)
+# Kruskal
+![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/kruskal.png)
+![Solved Problem](https://github.com/AleS900/prueba/blob/master/assets/kr.png)
 
-**Digit DP** es una técnica sencilla y útil para resolver distintos problemas de **Programación Dinámica**; como indica su nombre **“Digit DP”** trabajará con dígitos.
+El algoritmo de **Kruskal** coloca inicialmente todos los nodos del gráfico original aislados entre sí, para formar un bosque de árboles de **un** solo nodo, y luego fusiona gradualmente estos árboles, combinando en cada iteración dos cualesquiera de todos los árboles con algún borde del gráfico original.
 
 ## Algoritmo Base
 ### Código
--  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/DigitDP.java) - _Java
--  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++
+-  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/Kruskal.java) - _Java
+-  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/kruskal.cpp) - _C++
+-  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/kruskal) - _Python
 ### Entrada de Prueba
--  [Digit DP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
+-  [Kruskal - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
 
 ## Problemas
-- ...
+-  [UVa 10034 - Freckles](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
 
 ## Referencias
 ### Sitios Web 
--  [Introducción a Digit DP](https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d)
--  [Digit Dynamic Programming](https://medium.com/@sachinhegde0411/digit-dynamic-programming-c526dbfcbd74)
--  [Explicaión: Digit DP - CodeForces](https://codeforces.com/blog/entry/53960)
+-  [Árbol de Expansión Mínima: Algoritmo de Kruskal](https://jariasf.wordpress.com/2012/04/19/arbol-de-expansion-minima-algoritmo-de-kruskal/)
+-  [Explicación: Algoritmo de Kruskal](https://cp-algorithms.com/graph/mst_kruskal.html)
+-  [Explicación: Digit DP - CodeForces](https://codeforces.com/blog/entry/53960)
 ### Videos y Tutoriales
--  [Explicación Código: Digit DP (eng)](https://www.youtube.com/watch?v=5ag4kmHVs8k)
--  [Explicación Funcionamiento + Ejemplo: Digit DP (eng)](https://www.youtube.com/watch?v=cZV7HZhbGQI)
+- ...
