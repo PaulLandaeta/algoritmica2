@@ -9,11 +9,9 @@
 -  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++
 ### Entrada de Prueba
 -  [Digit DP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
-<br/>
 
 ## Problemas
 - ...
-<br/>
 
 ## Referencias
 ### Sitios Web 
