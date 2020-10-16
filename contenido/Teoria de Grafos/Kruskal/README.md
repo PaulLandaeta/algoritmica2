@@ -1,7 +1,7 @@
 # Kruskal
 ![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/kruskal.png)
 
-El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirve para encontrar un _**árbol de expansión**_ mínimo en un grafo conexo y ponderado. Es decir, busca un subconjunto de aristas que, formando un árbol, incluyen todos los vértices y donde el valor de la suma de todas las aristas del árbol es el **mínimo**.
+El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirve para encontrar un _**árbol de expansión mínimo**_ en un grafo conexo y ponderado. Es decir, busca un subconjunto de aristas que, formando un árbol, incluyen todos los vértices y donde el valor de la suma de todas las aristas del árbol es el **mínimo**.
 
 ![Solved Problem](https://github.com/AleS900/prueba/blob/master/assets/kr.png)
 
