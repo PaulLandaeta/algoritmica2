@@ -15,7 +15,8 @@ Dado un conjunto de números enteros no negativos y una *suma* de valores , **Su
 <br/>
 
 ## Problemas
-- ...<br/>
+- ...
+<br/>
 
 ## Referencias
 
