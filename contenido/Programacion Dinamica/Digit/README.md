@@ -11,7 +11,7 @@
 -  [DigitDP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
 
 ## Problemas
--  [Explicación Funcionamiento + Ejemplo: Digit DP (eng)](https://www.youtube.com/watch?v=cZV7HZhbGQI)
+
 
 ## Referencias
 ### Sitios Web 
