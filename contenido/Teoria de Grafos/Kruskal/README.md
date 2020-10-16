@@ -9,7 +9,6 @@ El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirv
 ### Código
 -  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/Kruskal.java) - _Java
 -  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/kruskal.cpp) - _C++
--  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/kruskal) - _Python
 ### Entrada de Prueba
 -  [Kruskal - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
 
