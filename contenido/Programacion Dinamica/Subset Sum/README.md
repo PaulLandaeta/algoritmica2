@@ -1,9 +1,8 @@
 # Subset Sum
 
-set[]={3, 4, 5, 2}
-sum=9
-(x, y)= 'x' is the left number of elements,
-'y' is the required sum
+> Conjunto[]={3, 4, 5, 2}
+> suma=9
+> (x, y)= 'x' es el **número de elementos**,'y' es la suma **requerida**
 
 ![Subset Sum Graffic](https://github.com/AleS900/prueba/blob/master/assets/subsetsum.png)
 
@@ -15,7 +14,7 @@ Dado un conjunto de números enteros no negativos y una *suma* de valores , **Su
 -  [Subset Sum TD](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Subset%20Sum/subsetSumTD.cpp)
 
 ## Problemas
-
+- ...
 ## Referencias
 ### Sitios Web 
 - ...
