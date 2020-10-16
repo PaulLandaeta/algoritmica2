@@ -5,17 +5,18 @@
 
 ## Algoritmo Base
 ### Código
--  [DigitDP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/DigitDP.java) - _Java
--  [DigitDP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++
+-  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/DigitDP.java) - _Java
+-  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++
 ### Entrada de Prueba
--  [DigitDP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
+-  [Digit DP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
+<br/>
 
 ## Problemas
-
+<br/>
 
 ## Referencias
 ### Sitios Web 
--  [Introducción a DigitDP](https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d)
+-  [Introducción a Digit DP](https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d)
 -  [Digit Dynamic Programming](https://medium.com/@sachinhegde0411/digit-dynamic-programming-c526dbfcbd74)
 -  [Explicaión: Digit DP - CodeForces](https://codeforces.com/blog/entry/53960)
 ### Videos y Tutoriales
