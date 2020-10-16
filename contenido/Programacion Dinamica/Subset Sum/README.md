@@ -1,8 +1,8 @@
 # Subset Sum
 
-> Conjunto[]={3, 4, 5, 2}
->> suma=9
->> (x, y)= 'x' es el **número de elementos**,'y' es la suma **requerida**
+ Conjunto[]={3, 4, 5, 2}
+ suma=9
+ (x, y)= 'x' es el **número de elementos**,'y' es la suma **requerida**
 
 ![Subset Sum Graffic](https://github.com/AleS900/prueba/blob/master/assets/subsetsum.png)
 
@@ -23,8 +23,12 @@ Dado un conjunto de números enteros no negativos y una *suma* de valores , **Su
 -  [Explicación Lógica DP: Subset Sum (eng)](https://www.youtube.com/watch?v=dJmyfFC3-3A)
 -  [Explicación Funcionamiento + Ejemplo: Subset Sum (eng)](https://www.youtube.com/watch?v=BT_ACNC47Os)
 
-<ol>
-<li>Bird</li>
-<li>McHale</li>
-<li>Parish</li>
-</ol>
+*   A list item with a blockquote:
+
+    > This is a blockquote
+    > inside a list item.
+To put a code block within a list item, the code block needs to be indented twice — 8 spaces or two tabs:
+
+*   A list item with a code block:
+
+        <code goes here>
