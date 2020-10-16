@@ -5,6 +5,6 @@
 
 ## Referencias
 ### Sitios Web 
--   [id]: https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d  "INTRODUCCIÓN A DIGIT DP"
+-  [Introducción A DigitDP](https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d)
 -   Green
 -   Blue
