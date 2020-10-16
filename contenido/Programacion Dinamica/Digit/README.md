@@ -9,6 +9,10 @@
 -  [DigitDP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++
 ### Entrada de Prueba
 -  [DigitDP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
+
+## Problemas
+-  [Explicación Funcionamiento + Ejemplo: Digit DP (eng)](https://www.youtube.com/watch?v=cZV7HZhbGQI)
+
 ## Referencias
 ### Sitios Web 
 -  [Introducción a DigitDP](https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d)
@@ -16,7 +20,4 @@
 -  [Explicaión: Digit DP - CodeForces](https://codeforces.com/blog/entry/53960)
 ### Videos y Tutoriales
 -  [Explicación Código: Digit DP (eng)](https://www.youtube.com/watch?v=5ag4kmHVs8k)
--  [Explicación Funcionamiento + Ejemplo: Digit DP (eng)](https://www.youtube.com/watch?v=cZV7HZhbGQI)
-
-## Problemas
 -  [Explicación Funcionamiento + Ejemplo: Digit DP (eng)](https://www.youtube.com/watch?v=cZV7HZhbGQI)
