@@ -13,9 +13,10 @@ Dado un conjunto de números enteros no negativos y una *suma* de valores , **Su
 -  [Subset Sum BU](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Subset%20Sum/subsetSumBU.cpp)
 -  [Subset Sum TD](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Subset%20Sum/subsetSumTD.cpp)
 <br/>
+
 ## Problemas
-- ...
-<br/>
+- ...<br/>
+
 ## Referencias
 
 ### Sitios Web 
