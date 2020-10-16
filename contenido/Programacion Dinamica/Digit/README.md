@@ -3,7 +3,7 @@
 
 **Digit DP** es una técnica sencilla y útil para resolver distintos problemas de **Programación Dinámica**; como indica su nombre **“Digit DP”** trabajará con dígitos.
 
-## Algoritmo Base
+   ## Algoritmo Base
 ### Código
 -  [DigitDP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/DigitDP.java) - _Java
 -  [DigitDP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++
