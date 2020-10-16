@@ -54,16 +54,19 @@ int maxFlow(int s,int t) {
 
 
 int main() {
-    input;
-    int nodes, vertices; 
-    cin>>nodes>>vertices; 
-    memset(grafo,-1,sizeof(grafo));
-    for(int i=0;i<vertices;i++) {
+input;
+int nodes, vertices, nroCases = 1; 
+while(cin>>nodes && nodes) {
+    int s,t,vertices; 
+    cin>>s>>t>>vertices;
+    memset(grafo,0,sizeof(grafo));
+     for(int i=0;i<vertices;i++) {
         int from, to, capacity; 
         cin>>from>>to>>capacity;
         grafo[from][to] = capacity;          // camino capacidad
         grafo[to][from] = 0;                //  flujo camino residual 
     }
-
-    cout<<maxFlow(1,8)<<endl;
+    cout<<nroCases++<<endl;
+    cout<<maxFlow(s,t)<<endl;
+    }    
 }
