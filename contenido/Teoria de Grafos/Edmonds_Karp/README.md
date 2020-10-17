@@ -2,18 +2,18 @@
 
 El algoritmo Edmonds-Karp nos sirve para calcular el **flujo máximo** en una red de flujo. La ruta encontrada debe ser la ruta más corta que tenga capacidad disponible. Esto se puede encontrar mediante una **búsqueda en amplitud**. Otra propiedad de este algoritmo es que la longitud de la ruta de aumento más corta crece monótonamente.Por lo tanto, hay momentos en que un camino desde la fuente hasta el sumidero puede tomar más flujo, y ese es un camino en aumento.<br/>
 Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sumidero que actualmente puede tomar **más** flujo. 
-<br/>
+<br/><br/>
 
 ![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)<br/>
-_**Min(100,50)=<p style='color:red'>50</p>**_
+_**Min(100,50)=50**_
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)<br/>
-_**Min(100,50)=50**_
+_**Min(100,50)=50**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)<br/>
-_**Min(50,50,75)=50**_
+_**Min(50,50,75)=50**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK4.png)<br/>
-_**Min(50,100,25)=25**_
+_**Min(50,100,25)=25**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EKF.png)<br/>
-_**Min(100,50)=50**_
+_**Min(100,50)=50**_<br/><br/>
 
 ### Código
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T
