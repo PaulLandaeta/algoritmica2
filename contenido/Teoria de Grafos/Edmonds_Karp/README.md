@@ -27,7 +27,7 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 
 ## Problemas
 ### Juez Virtual
--  [UVa XXXX - xxxxx](https://vjudge.net/contest/400028#problem/D)
+-  [UVa 820 - Internet Bandwidth](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=761)
 
 ## Referencias
 ### Sitios Web 
