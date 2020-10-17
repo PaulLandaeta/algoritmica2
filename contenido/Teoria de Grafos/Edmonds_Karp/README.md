@@ -5,11 +5,15 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 <br/>
 
 ![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)<br/>
+>>_**Min(100,50)=<p style='color:red'>50</p>**_
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)<br/>
+>>_**Min(100,50)=50**_
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)<br/>
+>>_**Min(50,50,75)=50**_
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK4.png)<br/>
+>>_**Min(50,100,25)=25**_
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EKF.png)<br/>
-
+>>_**Min(100,50)=50**_
 
 ### Código
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T
