@@ -12,7 +12,7 @@ x satisfaga una propiedad específica que puede relacionarse con sus dígitos.
 ### Código
 -  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/DigitDP.java) - _Java_
 -  [Digit DP](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp) - _C++_
-### Entrada de Prueba
+#### Entrada de Prueba
 -  [Digit DP - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Digit/digit.cpp)
 
 ## Referencias
