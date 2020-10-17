@@ -4,8 +4,8 @@ El algoritmo Edmonds-Karp nos sirve para calcular el **flujo máximo** en una re
 Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sumidero que actualmente puede tomar **más** flujo. 
 <br/><br/>
 
-![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)
 ### Esquema inicial<br/><br/>
+![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)
 ### _Primera Ruta:    **Min(100,50)=50**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)
