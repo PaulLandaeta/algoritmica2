@@ -15,7 +15,12 @@ El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirv
 -  [Kruskal - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
 
 ## Problemas
+### Problemas Resueltos
 -  [UVa 10034 - Freckles](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
+### Problemas Sugeridos
+-  [UVa 10034 - Freckles](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=975)
+-  [UVa 908 - Re-connecting Computer Sites](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=849)
+-  [Hacker Rank - Kruskal (MST): Really Special Subtree](https://www.hackerrank.com/challenges/kruskalmstrsub/problem)
 
 ## Referencias
 ### Sitios Web 
