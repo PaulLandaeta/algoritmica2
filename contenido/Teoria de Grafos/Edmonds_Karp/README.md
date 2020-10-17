@@ -17,6 +17,7 @@ El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirv
 -  [Edmonds Karp - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/in.txt)
 
 ## Problemas
+### Juez Virtual
 -  [UVa 10034 - Freckles](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
 
 ## Referencias
