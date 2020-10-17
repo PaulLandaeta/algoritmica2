@@ -14,8 +14,7 @@ En ciencias de la computación, un segment tree, es una estructura de datos en l
 
 
 ## Referencias 
--  [](https://jariasf.wordpress.com/2012/04/02/disjoint-set-union-find/)
--  [Disjoint Set Union (Union Find)](https://www.hackerearth.com/practice/notes/disjoint-set-union-union-find/)
+-  [Efficient and easy segment trees](https://codeforces.com/blog/entry/18051)
 ## Videos
 -  [Episode 4 - Segment Trees](https://www.youtube.com/watch?v=Tr-xEGoByFQ)
 -  [Sum of given range](https://www.youtube.com/watch?v=2bSS8rtFym4)
