@@ -5,7 +5,7 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 <br/><br/>
 
 ![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)<br/>
-### Esquema inicial
+### Esquema inicial<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)<br/>
 ### _Primera Ruta:    **Min(100,50)=50**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)<br/>
