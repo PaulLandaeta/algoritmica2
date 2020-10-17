@@ -5,15 +5,16 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 <br/><br/>
 
 ![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)<br/>
-_**Min(100,50)=50**_
+### Esquema inicial
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)<br/>
-_**Min(100,50)=50**_<br/><br/>
+### _Primera Ruta:    **Min(100,50)=50**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)<br/>
-_**Min(50,50,75)=50**_<br/><br/>
+### _Segunda Ruta:    **Min(50,50,75)=50**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK4.png)<br/>
-_**Min(50,100,25)=25**_<br/><br/>
+### _Tercera Ruta:    **Min(50,100,25)=25**_<br/><br/>
 ![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EKF.png)<br/>
-_**Min(100,50)=50**_<br/><br/>
+### _**NO EXISTEN RUTAS DISPONIBLES
+### FlujoMAX= 50 + 50 + 25 = 125**_<br/><br/>
 
 ### Código
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T
