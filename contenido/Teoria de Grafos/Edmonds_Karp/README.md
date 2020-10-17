@@ -2,7 +2,7 @@
 
 El algoritmo Edmonds-Karp nos sirve para calcular el **flujo máximo** en una red de flujo. La ruta encontrada debe ser la ruta más corta que tenga capacidad disponible. Esto se puede encontrar mediante una **búsqueda en amplitud**. Otra propiedad de este algoritmo es que la longitud de la ruta de aumento más corta crece monótonamente.Por lo tanto, hay momentos en que un camino desde la fuente hasta el sumidero puede tomar más flujo, y ese es un camino en aumento.<br/>
 Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sumidero que actualmente puede tomar **más** flujo. 
-<br/><br/>
+<br/>
 
 ### Esquema inicial<br/>
 ![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)<br/><br/>
@@ -22,7 +22,7 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp.cpp) - _C++_
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp) - _Python_
 
-### Entrada de Prueba
+#### Entrada de Prueba
 -  [Edmonds Karp - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/in.txt)
 
 ## Problemas
