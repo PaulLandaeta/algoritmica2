@@ -1,13 +1,16 @@
-# Edmonds Karp
-![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)
-![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)
-![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)
-![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK4.png)
-![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EKF.png)
+# Edmonds Karp 
 
-El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirve para encontrar un _**árbol de expansión mínimo**_ en un grafo conexo y ponderado. Es decir, busca un subconjunto de aristas que, formando un árbol, incluyen todos los vértices y donde el valor de la suma de todas las aristas del árbol es el **mínimo**.
+El algoritmo Edmonds-Karp nos sirve para calcular el **flujo máximo** en una red de flujo. La ruta encontrada debe ser la ruta más corta que tenga capacidad disponible. Esto se puede encontrar mediante una **búsqueda en amplitud**. Otra propiedad de este algoritmo es que la longitud de la ruta de aumento más corta crece monótonamente.Por lo tanto, hay momentos en que un camino desde la fuente hasta el sumidero puede tomar más flujo, y ese es un camino en aumento.<br/>
+Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sumidero que actualmente puede tomar **más** flujo. 
+<br/>
 
-## Algoritmo Base
+![Unsolved Problem](https://github.com/AleS900/prueba/blob/master/assets/EK1.png)<br/>
+![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK2.png)<br/>
+![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK3%20(1).png)<br/>
+![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EK4.png)<br/>
+![Problem Solution Step 1](https://github.com/AleS900/prueba/blob/master/assets/EKF.png)<br/>
+
+
 ### Código
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp.cpp) - _C++
