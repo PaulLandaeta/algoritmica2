@@ -8,6 +8,7 @@ En ciencias de la computación, un segment tree, es una estructura de datos en l
 
 ## Problemas
 -  [Interval Product](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=441&page=show_problem&problem=3977)
+-  [Solution Interval Product](problems)
 -  [Frequent values](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2176)
 -  [Codeforces list](https://codeforces.com/blog/entry/22616) 
 
