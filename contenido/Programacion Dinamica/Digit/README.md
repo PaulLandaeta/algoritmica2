@@ -1,7 +1,8 @@
 # Digit
 ![Dividir los problemas en subproblemas](https://github.com/AleS900/prueba/blob/master/assets/digit.png)
 
-**Digit DP** es una técnica sencilla y útil para resolver distintos problemas de **Programación Dinámica**; como indica su nombre **“Digit DP”** trabajará con dígitos.
+**Digit DP** es una técnica sencilla y útil para resolver distintos problemas de **Programación Dinámica**;</br>
+como indica su nombre **“Digit DP”** trabajará con dígitos.
 
 ## Algoritmo Base
 ### Código
@@ -15,6 +16,6 @@
 -  [Introducción a Digit DP](https://medium.com/@sim017bawkar/introduction-to-digit-dp-40f0e6c9a77d) - _Medium_
 -  [Digit Dynamic Programming](https://medium.com/@sachinhegde0411/digit-dynamic-programming-c526dbfcbd74) - _Medium_
 -  [Explicación: Digit DP](https://codeforces.com/blog/entry/53960) - _CodeForces_
-### Videos y Tutoriales
+### Medios Audivisuales
 -  [Explicación Código: Digit DP (eng)](https://www.youtube.com/watch?v=5ag4kmHVs8k)
 -  [Explicación Funcionamiento + Ejemplo: Digit DP (eng)](https://www.youtube.com/watch?v=cZV7HZhbGQI)
