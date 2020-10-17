@@ -2,8 +2,8 @@
 
 Dado un conjunto de números enteros no negativos y una _**suma**_ de valores , **Subset Sum** nos permite determinar si hay un subconjunto del conjunto dado con una suma igual a la _**suma**_ dada.<br/><br/>
 
- ### Conjunto[]={3, 4, 5, 2}<br/>
- ### suma=9<br/>
+ ### Conjunto de Números = {3, 4, 5, 2}
+ ### Suma Dada = 9
  ### (x, y)= 'x' es el _**número de elementos**_,'y' es la suma _**requerida**_<br/>
 
 ![Subset Sum Graffic](https://github.com/AleS900/prueba/blob/master/assets/subsetsum.png)
@@ -18,12 +18,8 @@ Dado un conjunto de números enteros no negativos y una _**suma**_ de valores , 
 
 ## Problemas
 - ...
-<br/>
 
 ## Referencias
-
-### Sitios Web 
-- ...
 ### Videos y Tutoriales
 -  [Explicación Código: Subset Sum (eng)](https://www.youtube.com/watch?v=nqlNzOcnCfs)
 -  [Explicación Lógica DP: Subset Sum (eng)](https://www.youtube.com/watch?v=dJmyfFC3-3A)
