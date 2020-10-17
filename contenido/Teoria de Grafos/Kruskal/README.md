@@ -10,8 +10,7 @@ El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirv
 -  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/Kruskal.java) - _Java
 -  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/kruskal.cpp) - _C++
 -  [Kruskal](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/kruskal) - _Python
-
-### Entrada de Prueba
+#### Entrada de Prueba
 -  [Kruskal - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Kruskal/in.txt)
 
 ## Problemas
@@ -24,7 +23,7 @@ El algoritmo de **Kruskal** es un algoritmo de la **Teoría de Grafos** que sirv
 
 ## Referencias
 ### Sitios Web 
--  [Árbol de Expansión Mínima: Algoritmo de Kruskal](https://jariasf.wordpress.com/2012/04/19/arbol-de-expansion-minima-algoritmo-de-kruskal/)
--  [Explicación: Algoritmo de Kruskal](https://cp-algorithms.com/graph/mst_kruskal.html)
--  [Explicación: Digit DP - CodeForces](https://codeforces.com/blog/entry/53960)
+-  [Árbol de Expansión Mínima: Algoritmo de Kruskal](https://jariasf.wordpress.com/2012/04/19/arbol-de-expansion-minima-algoritmo-de-kruskal/) -_WordPress_
+-  [Explicación: Algoritmo de Kruskal](https://cp-algorithms.com/graph/mst_kruskal.html) -_CP-Algorithms_
+-  [Explicación: Digit DP](https://codeforces.com/blog/entry/53960) - _CodeForces_
 
