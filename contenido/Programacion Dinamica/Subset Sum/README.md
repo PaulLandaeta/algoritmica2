@@ -17,7 +17,7 @@ Dado un conjunto de números enteros no negativos y una _**suma**_ de valores , 
 <br/>
 
 ## Problemas
-- ...
+-  [UVa 12911 - Subset Sum](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=4776)
 
 ## Referencias
 ### Videos y Tutoriales
