@@ -16,10 +16,11 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 ### _**NO EXISTEN RUTAS DISPONIBLES**_
 ### _**FlujoMAX= 50 + 50 + 25 = 125**_<br/><br/>
 
+## Algoritmos Base
 ### Código
--  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T
--  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp.cpp) - _C++
--  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp) - _Python
+-  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T_
+-  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp.cpp) - _C++_
+-  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp) - _Python_
 
 ### Entrada de Prueba
 -  [Edmonds Karp - input](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/in.txt)
@@ -30,9 +31,9 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 
 ## Referencias
 ### Sitios Web 
--  [Explicación - Código: Edmonds-Karp y Ford-Fulkerson](https://cp-algorithms.com/graph/edmonds_karp.html) - _CP-Algorithms
--  [Explicación - Revisión: Edmonds-Karp](https://brilliant.org/wiki/edmonds-karp-algorithm/) - _Brilliant
--  [Explicación - Pseudocódigo - Complejidad: Edmonds-Karp](https://iq.opengenus.org/edmonds-karp-algorithm-for-maximum-flow/) - _OpenGenus IQ: Learn Computer Science
+-  [Explicación - Código: Edmonds-Karp y Ford-Fulkerson](https://cp-algorithms.com/graph/edmonds_karp.html) - _CP-Algorithms_
+-  [Explicación - Revisión: Edmonds-Karp](https://brilliant.org/wiki/edmonds-karp-algorithm/) - _Brilliant_
+-  [Explicación - Pseudocódigo - Complejidad: Edmonds-Karp](https://iq.opengenus.org/edmonds-karp-algorithm-for-maximum-flow/) - _OpenGenus IQ: Learn Computer Science_
 ### Material Audiovisual
 -  [Explicación: Edmonds-Karp](https://www.youtube.com/watch?v=RppuJYwlcI8)
 -  [Explicación - Implementación: Edmonds-Karp](https://www.youtube.com/watch?v=GiN3jRdgxU4)
