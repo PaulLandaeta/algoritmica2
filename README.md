@@ -1,1 +1,0 @@
-# Algoritmica 2
