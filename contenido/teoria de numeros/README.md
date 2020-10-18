@@ -15,7 +15,7 @@ A partir de esta unicidad en la factorización en factores primos se desarrollan
 
 ## Algoritmos Base
 ### Código
--  [Prim]
+-  Prim - _Java_
 -  [Prim](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/teoria%20de%20numeros/primes.cpp) - _C++_
 -  [Prim](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/teoria%20de%20numeros/primes) - _Python_
 
