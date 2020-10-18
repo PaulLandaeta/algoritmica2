@@ -14,7 +14,7 @@ Cada algoritmo y/o estructura de datos contiene un archivo **README** separado d
 -  [Subset Sum](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/Programacion%20Dinamica/Subset%20Sum)
 
 ## Bactracking
--  [Bactracking](https://github.com/darkv314/algoritmica2/tree/master/contenido/Backtracking)
+-  [Bactracking](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/Backtracking)
 
 ## Teoría de Grafos
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp)
@@ -24,6 +24,6 @@ Cada algoritmo y/o estructura de datos contiene un archivo **README** separado d
 -  [Números Primos](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/teoria%20de%20numeros)
 
 ## Otros
--  [Primer Parcial](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Subset%20Sum/subsetSumBU.cpp)
--  [Repaso](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Subset%20Sum/subsetSumBU.cpp)
--  [Códigos de Estudiantes](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Programacion%20Dinamica/Subset%20Sum/subsetSumBU.cpp)
+-  [Primer Parcial](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/otros/1er%20Parcial)
+-  [Ejercicios Resueltos](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/otros/Repaso)
+-  [Códigos de Estudiantes](https://github.com/PaulLandaeta/algoritmica2/tree/master/contenido/otros/TestEstudiantes)
