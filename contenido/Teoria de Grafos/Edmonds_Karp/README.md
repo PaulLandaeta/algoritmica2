@@ -18,7 +18,7 @@ Las rutas de aumento son simplemente cualquier ruta desde la fuente hasta el sum
 
 ## Algoritmos Base
 ### Código
--  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T_
+-  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenidoTeoria%20de%20Grafos/Edmonds_Karp/EdmondsKarp.java) - _Java/T_
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp.cpp) - _C++_
 -  [Edmonds Karp](https://github.com/PaulLandaeta/algoritmica2/blob/master/contenido/Teoria%20de%20Grafos/Edmonds_Karp/edmonds_karp) - _Python_
 
