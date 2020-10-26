@@ -10,7 +10,7 @@ int path[MAX_N];           // camino b: b <- a
 // [0,-1,3,0,2,-1, 4]
 //  0  1 2 3 4, 5, 6
 // Edmonds Karp 
-
+// DINIC 
 int maxFlow(int s,int t) { 
     // s nodo inicial 
     // t nodo final 
@@ -66,7 +66,6 @@ while(cin>>nodes && nodes) {
         grafo[from][to] = capacity;          // camino capacidad
         grafo[to][from] = 0;                //  flujo camino residual 
     }
-    cout<<nroCases++<<endl;
     cout<<maxFlow(s,t)<<endl;
     }    
 }
