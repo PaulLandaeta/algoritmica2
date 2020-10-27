@@ -37,10 +37,6 @@ void solve(int column) { // column es la columna actual
         }
     }
 }
-T(n) =MAX(N,  (N+1)* (N+2+T(N-1)))
-
-T(n) =  (N+1)* (N+2+T(N-1))
-
 int main () {
     solve(0);
 }
