@@ -1,4 +1,4 @@
-#include <bits/stdc++.h> 
+ #include <bits/stdc++.h> 
 #define input freopen("in.txt", "r", stdin)
 #define output freopen("out.txt", "w", stdout)
 
@@ -32,19 +32,19 @@ struct Point{
     }
 };
 
-Point operator +(const Point &a, const &b) {
+Point operator +(const Point &a, const Point &b) {
     return Point(a.x + b.x, a.y + b.y);
 }
 
-Point operator -(const Point &a, const &b) {
+Point operator -(const Point &a, const Point &b) {
     return Point(a.x - b.x, a.y-b.y); 
 }
 
-Point operator *(const Point &a, int k) {
+Point operator *(const Point &a, double k) {
     return Point(a.x*k,a.y*k); 
 }
 
-Point operator /(const Point &a, int k) {
+Point operator /(const Point &a, double k) {
     return Point(a.x/k, a.y/k); 
 }
 
@@ -73,12 +73,19 @@ double areaP(const Point &V, const Point &U) {
     return abs(cross(V,U));
 }
 
+// Area de 3 puntos 
+
+double area(const Point &A, const Point &B, const Point &C) {
+    return cross(C - A, B - A); 
+}
+
 // Area de un triangulo 
 // Area formada por 3 puntos. 
 // Primero Crear el vector V = C-A y el vector U = B-A
 // Por lo tanto puedo usar el cross product 
+
 double areaTriangulo(const Point &A, const Point &B, const Point &C) {
-    return abs(cross(C - A, B - A))/2.; 
+    return abs(area(A,B,C))/2.; 
 }
 
 
@@ -89,7 +96,78 @@ double areaHeron(double a, double b, double c) {
     return sqrt(s*(s-a)*(s-b)*(s-c));
 }
 
+// es rectangulo 
+
+bool is_triangle(Point &A, Point &B, Point &C) {
+    a = dist(A,B);// cuadrado
+    b = dist(A,C);// cuadrado
+    c = dist(B,C);// cuadrado
+    return 2*max(a,b,c) == a+b+c;
+}
+
+
+// punto de interseccion de rectas 
+// division entre dos double 
+// multiplicacion Point por un Double // por esa razon lo llevamos (B-A) a la izq. 
+Point lineIntersection(const Point &A,const Point &B,const Point &C,const Point &D) {
+    return A+(B-A)*(cross(C-A,D-C)/cross(B-A,D-C))
+}
 
 
 
+// P esta dentro del segmento AB 
+// 0.0
+bool onSegment(const Point &A, const Point&B, const Point &P) {
+    return areaTriangulo(A,B,P) == 0 && 
+        (P.x >= min(A.x,B.x) && P.x <= max(A.x,B.x)) && 
+        (P.y >= min(A.y,B.y) && P.y <= max(A.y,B.y));
+}
+
+bool intersectsSegment(const Point &A,const Point &B,const Point &C,const Point &D) {
+    double A1 = area(C,A,D);   // el segmento es CD y A es el punto
+    double A2 = area(C,B,D);   // el segmento es CD, y B es el punto 
+    double A3 = area(A,B,C);   // el segmento es AB, y C es el punto
+    double A4 = area(A,B,D);   // el segmento es AB, y D es el punto  
+
+    if(((A1 > 0 && A2 < 0) || (A1<0 && A2>0)) && 
+        ((A3 > 0 && A4 < 0) || (A3<0 && A4>0)))  {
+        true;
+    }
+
+    if(A1 == 0 && onSegment(C,D,A)) {
+        return true;
+    }
+
+    if(A2 == 0 && onSegment(C,D,B)) {
+        return true;
+    }
+
+    if(A3 == 0 && onSegment(A,B,C)) {
+        return true;
+    }
+
+    if(A4 == 0 && onSegment(A,B,D)) {
+        return true;
+    }
+
+    return false;
+}
+
+
+
+// poligono Convexo o No convexo 
+
+bool isConvex(const vector<Point> &polign) {
+    int nroPoints = polign.size();
+    int areasPositive =  0, areasNegative = 0;
+    for(int i = 0; i < nroPoints ;i++) {
+        double areaPoints = area(polign[i],polign[(i+1)%nroPoints],polign[(i+2)%nroPoints]); 
+        if(areaPoints>0) {
+           areasPositive++; 
+        } else if(areaPoints<0) {
+           areasNegative++;
+        }
+    }
+    return areasPositive == 0 || areasNegative == 0;
+}
 
