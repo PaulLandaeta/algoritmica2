@@ -88,7 +88,6 @@ double areaTriangulo(const Point &A, const Point &B, const Point &C) {
     return abs(area(A,B,C))/2.; 
 }
 
-
 //  Formula de heron 
 
 double areaHeron(double a, double b, double c) {
@@ -169,5 +168,16 @@ bool isConvex(const vector<Point> &polign) {
         }
     }
     return areasPositive == 0 || areasNegative == 0;
+}
+
+// Area de un Poligono 
+
+double areaPoligono(const vector<Point> &poligono) {
+    int nroPoints = poligono.size(); 
+    double areaTotal = 0; 
+    for(int i = 1; i < nroPoints - 1; i++) {
+        areaTotal += area(poligono[0],poligono[i],poligono[i+1]); 
+    }
+    return abs(areaTotal/2);
 }
 
