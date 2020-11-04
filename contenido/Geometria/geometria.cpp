@@ -65,12 +65,14 @@ double dist(const Point &A, const Point &B) {
 
 // Producto Escalar 
 // A y B son vectores
+// si el producto es 0 son perpendiculares
 double dot(const Point &A, const Point &B) {
     return A.x * B.x + A.y * B.y; 
 }
 
 // Product Cross or producto Vectorial (Area de un paralelogramo)
 // V y U son vectores
+// si el producto es 0 son paralelos 
 double cross(const Point &V, const Point &U) {
     return V.x * U.y - V.y * U.x;
 }
