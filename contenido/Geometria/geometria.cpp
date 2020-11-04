@@ -48,6 +48,14 @@ Point operator /(const Point &a, double k) {
     return Point(a.x/k, a.y/k); 
 }
 
+bool operator <(const Point &a, const Point &b) {
+    if(a.x != b.x) {
+        return a.x < b.x;
+    } else {
+        return  a.y < b.y;
+    }
+}
+
 // Funciones Basicas 
 // Distancia de dos puntos // sqrt(B.x-A.x + B.y-A.y)
 // http://www.cplusplus.com/reference/cmath/hypot/
@@ -57,12 +65,14 @@ double dist(const Point &A, const Point &B) {
 
 // Producto Escalar 
 // A y B son vectores
+// si el producto es 0 son perpendiculares
 double dot(const Point &A, const Point &B) {
     return A.x * B.x + A.y * B.y; 
 }
 
 // Product Cross or producto Vectorial (Area de un paralelogramo)
 // V y U son vectores
+// si el producto es 0 son paralelos 
 double cross(const Point &V, const Point &U) {
     return V.x * U.y - V.y * U.x;
 }
@@ -76,7 +86,7 @@ double areaP(const Point &V, const Point &U) {
 // Area de 3 puntos 
 
 double area(const Point &A, const Point &B, const Point &C) {
-    return cross(C - A, B - A); 
+    return cross(B - A, C - A); 
 }
 
 // Area de un triangulo 
@@ -180,4 +190,31 @@ double areaPoligono(const vector<Point> &poligono) {
     }
     return abs(areaTotal/2);
 }
+
+// Convex Hull 
+
+vector<Point> convexHull(vector<Point> &points) {
+    sort(points.begin(),points.end());
+    int k = 0;
+    Point hulls[points.size()+10];   // podriamos usar una pila  
+    // Parte Inferior 
+    for(int i = 0; i<points.size();i++){
+        while(k>=2 && area(hulls[k-2],hull[k-1],points[i])<=0) {
+            k--; // stack.pop();
+        }
+        hulls[k++] = points[i];
+    }
+
+    // Parte Superior
+
+    for(int i = points.size()-2, t = k;i>=0; i--) {
+        while( k > t && area(hulls[k-2],hull[k-1],points[i]<=0)){
+            k--;
+        }
+        hulls[k++] = points[i];
+    }
+
+    return vector<Point> (hulls,hulls+k-1);
+}
+
 
