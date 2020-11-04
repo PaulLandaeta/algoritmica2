@@ -1,7 +1,9 @@
 package geometria;
 
+import java.util.Arrays;
+
 public class Geometria {
-	class Punto {
+	class Punto implements Comparable<Punto>{
 		double x, y;
 
 		public Punto(double x, double y) {
@@ -20,6 +22,15 @@ public class Geometria {
 		Punto unitario() {
 			double modulo = mod();
 			return new Punto(x / modulo, y / modulo);
+		}
+
+		@Override
+		public int compareTo(Punto o) {
+			if(this.x != o.x) {
+		        return (int) (100*(this.x - o.x));
+		    } else {
+		        return  (int) (100*(this.y - o.y));
+		    }
 		}
 	}
 
@@ -47,12 +58,14 @@ public class Geometria {
 
 	// Producto Escalar
 	// A y B son vectores
+	// si el producto es 0 son perpendiculares
 	double dot(Punto A, Punto B) {
 		return A.x * B.x + A.y * B.y;
 	}
 
 	// Product Cross or producto Vectorial (Area de un paralelogramo)
 	// V y U son vectores
+	// si el producto es 0 son paralelos 
 	double cross(Punto V, Punto U) {
 		return V.x * U.y - V.y * U.x;
 	}
@@ -153,6 +166,31 @@ public class Geometria {
 			areaTotal += area(poligono[0],poligono[i],poligono[i+1]);
 		}
 		return Math.abs(areaTotal/2);
+	}
+
+	// Convex Hull 
+	
+	Punto[] convexHull(Punto[] puntos) {
+		Arrays.sort(puntos);
+		int k=0;
+		Punto[] hulls =new Punto[puntos.length+1];
+		for (int i = 0; i < puntos.length; i++) {
+			while(k>=2&&area(hulls[k-2],hulls[k-1],puntos[i])<=0) {
+				k--;
+			}
+			hulls[k++]=puntos[i];
+		}
+		for(int i=puntos.length-2,t=k;i>=0;i--) {
+			while( k > t && area(hulls[k-2],hulls[k-1],puntos[i])<=0){
+	            k--;
+	        }
+	        hulls[k++] = puntos[i];
+		}
+		Punto[] resultado= new Punto[k-1];
+		for (int i = 0; i < resultado.length; i++) {
+			resultado[i]=hulls[i];
+		}
+		return resultado;
 	}
 
 }
