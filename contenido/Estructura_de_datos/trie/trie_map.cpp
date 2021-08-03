@@ -17,7 +17,7 @@ void init()
 
 void insertWord(string word)
 {
-    node *currentNode =  trie;  
+    node *currentNode = trie;  
     for (int i = 0; i < word.length(); i++)
     {
         if (!currentNode->mapero[word[i]])

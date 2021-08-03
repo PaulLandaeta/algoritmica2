@@ -3,33 +3,28 @@
 using namespace std; 
 
 struct node {
-    char currentCharacter;       // 'a'
-    bool isWord;                // false 
-    int countWords = 0; 
-    struct node *children[27];  // sus nodos hijos  [null,null,null.....] 
+    char currentCharacter;       
+    bool isWord = false;    
+    int priority = 0;            
+    struct node *children[27];  // [null,null,null,......,null]
 }*trie; 
 
 // Inicializar 
 
 void init() {
-    trie = new node();
-    trie->isWord = false;
-    trie->countWords = 0;
+    trie = new node();  // Instanciar el objeto trie
 }
 
-void insertWord(string word) {   // alto 
+void insertWord(string word, int priority) {   // alba 
     node *currentNode =  trie;  
-    for (int i = 0; i< word.length(); i++) {
+    for (int i = 0; i< word.length(); i++) { // alba
         int character = word[i] - 'a';       // i = 0 'a'-'a' = 0
         if(currentNode->children[character] == NULL ) {
             currentNode->children[character] = new node();
-            currentNode->children[character]->countWords = 0;
         }
+        currentNode = max(currentNode->priority,priority);
         currentNode = currentNode->children[character];
-        // cout<< "Insertanto el caracter "<< word[i]<< endl;
         currentNode->currentCharacter = word[i];
-        currentNode->countWords++;
-        currentNode->isWord = false; // llevamos al constructor 
     }
     currentNode->isWord = true;
 }
@@ -43,7 +38,7 @@ bool searchWord(string word) {   // alto
         }
         currentNode = currentNode->children[character];
     }
-    return currentNode->isWord;
+    return currentNode->priority;
 }
 
 
@@ -82,7 +77,7 @@ void isThereWord(string word) {
 int main() {
 
     // Inicializar Trie
-    init(); 
+    init();  
     string word = "alto";
     insertWord(word);
     isThereWord(word);
