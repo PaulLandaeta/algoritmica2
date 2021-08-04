@@ -4,9 +4,12 @@ using namespace std;
 
 struct node {
     char currentCharacter;       
-    bool isWord = false;    
-    int priority = 0;            
+    bool isWord;
+   //  int priority = 0;            
     struct node *children[27];  // [null,null,null,......,null]
+    node() {
+        isWord = false;
+    }
 }*trie; 
 
 // Inicializar 
@@ -15,14 +18,15 @@ void init() {
     trie = new node();  // Instanciar el objeto trie
 }
 
-void insertWord(string word, int priority) {   // alba 
+void insertWord(string word) {   // alba 
     node *currentNode =  trie;  
     for (int i = 0; i< word.length(); i++) { // alba
         int character = word[i] - 'a';       // i = 0 'a'-'a' = 0
         if(currentNode->children[character] == NULL ) {
             currentNode->children[character] = new node();
+           // currentNode->isWord = false;
         }
-        currentNode = max(currentNode->priority,priority);
+      //   currentNode = max(currentNode->priority,priority);
         currentNode = currentNode->children[character];
         currentNode->currentCharacter = word[i];
     }
@@ -38,11 +42,12 @@ bool searchWord(string word) {   // alto
         }
         currentNode = currentNode->children[character];
     }
-    return currentNode->priority;
+    cout<<currentNode->currentCharacter<<endl;
+    return currentNode->isWord;
 }
 
 
-
+/*
 int findWords(string prefix) {   // alto 
     node *currentNode =  trie;  
     for (int i = 0; i< prefix.length(); i++) {
@@ -53,8 +58,7 @@ int findWords(string prefix) {   // alto
         currentNode = currentNode->children[character];
     }
     return currentNode->countWords;
-}
-
+}*/
 /*
 void showTrie(node currentNode ) {
     node *currentNode =  trie;  
@@ -78,7 +82,7 @@ int main() {
 
     // Inicializar Trie
     init();  
-    string word = "alto";
+    string word = "auto";
     insertWord(word);
     isThereWord(word);
     word = "automovil";   
