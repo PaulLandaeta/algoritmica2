@@ -8,12 +8,15 @@ struct node {
     // crear una variable por query
     int maximo;
     int minimo;
+    int suma;
 }segmentTree[1000000];
 
 void init(int ini, int fin, int nodoActual) {
     if(ini == fin) {
         segmentTree[nodoActual].maximo = numbers[ini];
         segmentTree[nodoActual].minimo = numbers[ini];
+        segmentTree[nodoActual].suma = numbers[ini];
+
     }
     else {
         int medio = (ini + fin) / 2;
@@ -26,6 +29,7 @@ void init(int ini, int fin, int nodoActual) {
         // Actualizar el nodo actual
         segmentTree[nodoActual].maximo = max(segmentTree[hijoIzq].maximo, segmentTree[hijoDer].maximo);
         segmentTree[nodoActual].minimo = max(segmentTree[hijoIzq].minimo, segmentTree[hijoDer].minimo);
+        segmentTree[nodoActual].suma = segmentTree[hijoIzq].suma + segmentTree[hijoDer].suma;
     }
 }
 
@@ -48,6 +52,7 @@ node query(int ini, int fin, int nodoActual, int i, int j) {
             node resultado; 
             resultado.maximo = max(queryIzq.maximo, queryDer.maximo);
             resultado.minimo = min(queryIzq.minimo, queryDer.minimo);
+            resultado.suma = queryIzq.suma +  queryDer.suma;
             return resultado;
         }
     }

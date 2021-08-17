@@ -95,6 +95,11 @@ int main() {
     input;
     output;
     int queries; 
+    //a[-2,6,2,-1]
+
+    // 4 1
+    // P 1 4
+    
     while(cin>>n>>queries) {
         for(int i=0;i<n;i++){
             cin>>a[i];
