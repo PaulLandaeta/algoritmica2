@@ -25,35 +25,35 @@ bool isPrime(int n) {
 * Digit DP para contar los numeros 
 * donde la suma de los digitos sea un numero primo 
 */ 
-int solve_dp(int pos, int mayor,int total) {
+int solve_dp(int pos, int mayor,int sumaDigitos) {
     if(pos > number.size()) { // cuando la posicion exceda al numero dado
         return 0;
     }
     // Modificar de acuerdo al problema
     if(pos == number.size()) {
-        if(pares == 2) { // tiene 2 pares el numero 
+        if(sumaDigitos % 5 == 0) { // la suma de los digitos es primo
             return 1;
         }
         else {
             return 0;
         }
     }
-    dp[pos][mayor][total] = 0;
-    if(dp[pos][mayor][pares] == -1) { // Pregunto si no lo he calculado 
+    if(dp[pos][mayor][sumaDigitos] == -1) { // Pregunto si no lo he calculado 
         int tope = 9;
         if(mayor == true) {  // el numero que voy a crear puede llegar a ser mayor
             tope = number[pos]-'0';  // solo podemos usar los numeros de 0 al tope -- '3'-'0' =  51 - 48 = 3 
         }
+        dp[pos][mayor][sumaDigitos] = 0;
         for(int digito = 0; digito <= tope; digito++) {
             if(digito == tope ) {
-                dp[pos][mayor][pares] += solve_dp(pos+1, true, digito+total);
+                dp[pos][mayor][sumaDigitos] += solve_dp(pos+1, true, digito+sumaDigitos);
             }
             else { // 0 1 2 
-                dp[pos][mayor][pares] += solve_dp(pos+1, false, digito+total);
+                dp[pos][mayor][sumaDigitos] += solve_dp(pos+1, false, digito+sumaDigitos);
             }
         }
     }
-    return dp[pos][mayor][pares];
+    return dp[pos][mayor][sumaDigitos];
 }
 
 
@@ -62,8 +62,8 @@ int main(){
 
     // hallar los numeros que tengan 2 pares en su interior del rango 20 hasta 30
 
-    int  a = 20;
-    int b = 30;
+    int  a = 1;
+    int b = 15;
     // calculando f(a)
     number = to_string(a-1);
     memset(dp, -1, sizeof(dp));
