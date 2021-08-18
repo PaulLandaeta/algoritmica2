@@ -31,11 +31,11 @@ bool es_valido(int tablero[][],int fila,int columna) {
     return true;
 }
 void solve_queen(int columna, int tablero[][]){   // f(pos, tablero)
-    if( columna > 4 ) { // ya puso todas las reinas 
+    if( columna >= 4 ) { // ya puso todas las reinas  // CASO BASE
         print_solucion(tablero);
     }
     for (int row = 0; row < 4; row++) {
-        if(es_valido(tablero,row,columna)){
+        if(es_valido(tablero,row,columna)){  // PODA
             tablero[row][columna] = 1;
             solve_queen(columna+1,tablero);
             tablero[row][columna] = 0;
