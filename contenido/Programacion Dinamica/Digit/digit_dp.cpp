@@ -17,6 +17,7 @@ int solve_dp(int pos, int mayor,int pares) {
     }
     // Modificar de acuerdo al problema
     if(pos == number.size()) {
+        cout<<pares<<endl;
         if(pares == 2) { // tiene 2 pares el numero 
             return 1;
         }
@@ -24,7 +25,6 @@ int solve_dp(int pos, int mayor,int pares) {
             return 0;
         }
     }
-    dp[pos][mayor][pares] = 0;
     if(dp[pos][mayor][pares] == -1) { // Pregunto si no lo he calculado 
         int tope = 9;
         if(mayor == true) {  // el numero que voy a crear puede llegar a ser mayor
@@ -33,10 +33,11 @@ int solve_dp(int pos, int mayor,int pares) {
         dp[pos][mayor][pares] = 0;
         for(int digito = 0; digito <= tope; digito++) {
             if(digito == tope ) {
-                dp[pos][mayor][pares] += solve_dp(pos+1, true, pares + digito%2 == 0);
+                dp[pos][mayor][pares] += solve_dp(pos+1, true, pares + (digito%2 == 0));
             }
             else { // 0 1 2 
-                dp[pos][mayor][pares] += solve_dp(pos+1, false, pares + digito%2 == 0);
+                cout<<pares<<" "<<digito<<" "<< (digito%2 == 0) <<endl;
+                dp[pos][mayor][pares] += solve_dp(pos+1, false, pares + (digito%2 == 0));
             }
         }
     }
@@ -49,17 +50,17 @@ int main(){
 
     // hallar los numeros que tengan 2 pares en su interior del rango 20 hasta 30
 
-    int  a = 20;
+    //int  a = 20;
     int b = 30;
     // calculando f(a)
-    number = to_string(a-1);
-    memset(dp, -1, sizeof(dp));
-    int pares_hasta_a = solve_dp(0, true, 0);
+    //number = to_string(a-1);
+    //memset(dp, -1, sizeof(dp));
+    //int pares_hasta_a = solve_dp(0, true, 0);
     // calculando f(b)
     memset(dp, -1, sizeof(dp));
     number = to_string(b);
     int pares_hasta_b = solve_dp(0, true, 0);
     // total para f(a,b) = f(b) - f(a-1)
-    cout<< pares_hasta_b - pares_hasta_a;
+    cout<< pares_hasta_b;
     return 0;
 }
