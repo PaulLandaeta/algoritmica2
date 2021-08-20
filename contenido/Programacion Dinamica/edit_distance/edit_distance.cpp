@@ -6,11 +6,11 @@ string wordA,wordB;
 
 int dp[10000][10000];
 int solve(int posA, int posB) {
-    if(posA == 0){
-        return posB;
+    if(posA == -1){
+        return posB + 1;
     } 
-    if(posB == 0){ 
-        return posA;
+    if(posB == -1){ 
+        return posA + 1;
     }
     if(dp[posA][posB] == -1){
         int minimoEditDistance = 100000000;
@@ -33,8 +33,8 @@ int solve(int posA, int posB) {
 int main()
 {
 
-    wordA = "ACAAAAAAAAADASDASDAS";
-    wordB = "ACASDASFASFADFASDASDASD";
+    wordA = "AEO";
+    wordB = "AC";
     memset(dp,-1,sizeof(dp));
     cout << solve(wordA.length()-1, wordB.length()-1) << endl; 
 
