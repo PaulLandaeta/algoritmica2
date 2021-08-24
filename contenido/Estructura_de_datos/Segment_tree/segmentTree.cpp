@@ -1,6 +1,9 @@
 #include <bits/stdc++.h> 
 #define input freopen("in.txt", "r", stdin)
 #define output freopen("out.txt", "w", stdout)
+#include <bits/stdc++.h> 
+#define input freopen("in.txt", "r", stdin)
+#define output freopen("out.txt", "w", stdout)
 // Variables
 #define MAX_N 100010
 
@@ -10,9 +13,13 @@ using namespace std;
 
 int n, a[MAX_N];
 
+int gcd(int a, int b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
+}
 
 struct node{
-    int sum, mult , min, max;
+    int sum, mult , min, max, gcd;
 }segmentTree[MAX_N*2];
 
 void init(int inicio, int final, int nodoActual) { 
@@ -20,6 +27,7 @@ void init(int inicio, int final, int nodoActual) {
         segmentTree[nodoActual].max = a[inicio];
         segmentTree[nodoActual].min = a[inicio];
         segmentTree[nodoActual].sum = a[inicio];
+        segmentTree[nodoActual].gcd = a[inicio];
     } else {
         int mid = (inicio + final) / 2; 
         int nodoIzquierdo = 2 * nodoActual + 1; 
@@ -32,6 +40,7 @@ void init(int inicio, int final, int nodoActual) {
         segmentTree[nodoActual].sum = segmentTree[nodoIzquierdo].sum + segmentTree[nodoDerecho].sum;
         segmentTree[nodoActual].max = max(segmentTree[nodoIzquierdo].max,  segmentTree[nodoDerecho].max);
         segmentTree[nodoActual].min = min(segmentTree[nodoIzquierdo].min, segmentTree[nodoDerecho].min);
+        segmentTree[nodoActual].gcd = gcd(segmentTree[nodoIzquierdo].gcd, segmentTree[nodoDerecho].gcd);
     } 
 }
 
@@ -56,6 +65,7 @@ node query(int inicio, int final, int nodoActual, int izquierda, int derecha ) {
         node result ; 
         result.max = max(maxIzquierdo.max, maxDerecho.max);
         result.min = min(maxIzquierdo.min, maxDerecho.min); 
+        result.gcd = gcd(maxIzquierdo.gcd, maxDerecho.gcd); 
         return result;
     }      
 }
@@ -87,6 +97,8 @@ void update(int inicio, int final, int nodoActual, int posicion, int valor ) {
 }
 
 int main() {
+
+}
     input;
     cin>>n;
     for(int i = 0; i < n; i++) {
