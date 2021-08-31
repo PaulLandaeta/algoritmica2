@@ -6,22 +6,23 @@ int n;
 int x;
 int A[100000];
 bool f(int number) {
-    return number > x;
+    return number >= x;
 }
 
 void bs() {
     int ini = 0;
     int fin = n - 1;
+    int mid = (ini + fin) / 2;
     while(ini < fin ) {
-        int mid = (ini + fin) / 2;
         if(f(A[mid])) {  /// MOdificar la funcion de condicion
-            fin = mid -1 ;
+            fin = mid ;
         } else {
-            ini = mid;
+            ini = mid + 1;
         }
+        mid = (ini + fin) / 2;
     }
-    if(f(A[fin])) {
-        cout<<A[fin]<<endl;
+    if(f(A[mid])) {
+        cout<<A[mid]<<endl;
     }else {
         cout<<"No hay elementos mayores"<<endl;
     }
