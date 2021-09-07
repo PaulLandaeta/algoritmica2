@@ -71,7 +71,7 @@ node query(int inicio, int final, int nodoActual, int izquierda, int derecha ) {
 }
 
 void update(int inicio, int final, int nodoActual, int posicion, int valor ) {
-    if(posicion < inicio && posicion > final ) {
+    if(posicion < inicio || posicion > final ) {
         return ;
     }
 

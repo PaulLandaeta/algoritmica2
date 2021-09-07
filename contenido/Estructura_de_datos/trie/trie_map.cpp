@@ -6,6 +6,7 @@ int numberOfNodes = 0;
 struct node
 {
     map<char, node*> mapero;
+    string company;
     bool isWord;                
 } *trie;
 

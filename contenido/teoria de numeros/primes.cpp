@@ -8,8 +8,8 @@ typedef map<int, int> mii;
 
 ll _sieve_size;
 bitset<10000010> bs;                             // 10^7 is the rough limit
-vll p;                                           // compact list of primes
-
+vll p;    //[2,3,5,7]                                       // compact list of primes
+// bs [0,0,1,1,0,1,0,1,....]
 void sieve(ll upperbound) {                      // range = [0..upperbound]
   _sieve_size = upperbound+1;                    // to include upperbound
   bs.set();                                      // all 1s
@@ -30,14 +30,18 @@ bool isPrime(ll N) {                             // good enough prime test
 } // note: only guaranteed to work for N <= (last prime in vll p)^2
 
 // second part
-
+// N = 48/2 = 24/2 = 12 / 2 = 6 /2 = 3 / 3 = 1
+// factors = {2,2,2,2,3}
+// p = {2,3,5,7....}
 vll primeFactors(ll N) {                         // pre-condition, N >= 1
   vll factors;
-  for (int i = 0; i < (int)p.size() && p[i]*p[i] <= N; ++i)
-    while (N%p[i] == 0) {                        // found a prime for N
-      N /= p[i];                                 // remove it from N
-      factors.push_back(p[i]);
-    }
+  for (int i = 0; i < (int)p.size() && p[i]*p[i] <= N; ++i){ 
+      while (N%p[i] == 0) {                        // found a prime for N
+        N /= p[i];                                 // remove it from N
+        factors.push_back(p[i]);
+      }
+  }
+    
   if (N != 1) factors.push_back(N);              // remaining N is a prime
   return factors;
 }
@@ -68,40 +72,22 @@ ll sumPF(ll N) {
   if (N != 1) ans += N;
   return ans;
 }
-
+// N = 48 / 2 = 24 / 2 = 12 / 2 = 6 / 2 = 3 
+// p = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47}
+// i = 1 
+// p[i] = 3
+// ans = 1 * (4+1) = 5 * 2 = 10
+// power = (2)  // contando los exponentes de los primos
+// 2*2 < = 48
+// 3*3 < = 3
 int numDiv(ll N) {
   int ans = 1;                                   // start from ans = 1
   for (int i = 0; i < (int)p.size() && p[i]*p[i] <= N; ++i) {
     int power = 0;                               // count the power
     while (N%p[i] == 0) { N /= p[i]; ++power; }
-    ans *= power+1;                              // follow the formula
+    ans *= power+1; // (ep1+1)* (ep2+1)*.....*(epn+1)                             // follow the formula
   }
   return (N != 1) ? 2*ans : ans;                 // last factor = N^1
-}
-
-ll sumDiv(ll N) {
-  ll ans = 1;                                    // start from ans = 1
-  for (int i = 0; i < (int)p.size() && p[i]*p[i] <= N; ++i) {
-    ll multiplier = p[i], total = 1;
-    while (N%p[i] == 0) {
-      N /= p[i];
-      total += multiplier;
-      multiplier *= p[i];
-    }                                            // total for
-    ans *= total;                                // this prime factor
-  }
-  if (N != 1) ans *= (N+1);                      // N^2-1/N-1 = N+1
-  return ans;
-}
-
-ll EulerPhi(ll N) {
-  ll ans = N;                                    // start from ans = N
-  for (int i = 0; i < (int)p.size() && p[i]*p[i] <= N; ++i) {
-    if (N%p[i] == 0) ans -= ans/p[i];            // count unique
-    while (N%p[i] == 0) N /= p[i];               // prime factor
-  }
-  if (N != 1) ans -= ans/N;                      // last factor
-  return ans;
 }
 
 int main() {
@@ -146,17 +132,7 @@ int main() {
   printf("numDiffPF(%d) = %d\n", 60, numDiffPF(60)); // 2^2 * 3^1 * 5^1 => 3
   printf("sumPF(%d) = %lld\n", 60, sumPF(60));   // 2^2 * 3^1 * 5^1 => 2 + 2 + 3 + 5 = 12
   printf("numDiv(%d) = %d\n", 60, numDiv(60)); // 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60, 12 divisors
-  printf("sumDiv(%d) = %lld\n", 60, sumDiv(60)); // The summation of 12 divisors above is 168
-  printf("EulerPhi(%d) = %lld\n", 36, EulerPhi(36)); // 12 integers < 36 are relatively prime with 36
   printf("\n");
-
-  // special cases when N is a prime number
-  printf("numPF(%d) = %d\n", 7, numPF(7));     // 7^1 => 1
-  printf("numDiffPF(%d) = %d\n", 7, numDiffPF(7)); // 7^1 = 1
-  printf("sumPF(%d) = %lld\n", 7, sumPF(7));     // 7^1 => 7
-  printf("numDiv(%d) = %d\n", 7, numDiv(7));   // 1 and 7, 2 divisors
-  printf("sumDiv(%d) = %lld\n", 7, sumDiv(7));   // 1 + 7 = 8
-  printf("EulerPhi(%d) = %lld\n", 7, EulerPhi(7)); // 6 integers < 7 are relatively prime with prime number 7
-
+  
   return 0;
 }
