@@ -218,7 +218,7 @@ double areaPoligono(const vector<Point> &poligono) {
 vector<Point> convexHull(vector<Point> &points) {
     sort(points.begin(),points.end()); // Ordenamos los puntos para encontrar el punto mas a la izquierda
     int k = 0; // k cuenta cuantos puntos tendra el convex hull
-    Point hulls[points.size()];   // Guardar los puntos del convex hull
+    Point hulls[points.size()+100];   // Guardar los puntos del convex hull
     // Parte inferior 
     for(int i = 0; i<points.size();i++){
         while(k>=2 && area(hulls[k-2],hulls[k-1],points[i])<=0) {
@@ -246,8 +246,26 @@ vector<Point> convexHull(vector<Point> &points) {
 
 
 int main(){
-    Point A(0,6);
-    Point B(2,3);
-    cout<<B<<endl;
+    input;
+    int n;
+    vector<Point> poligono;
+    cin >> n;
+    for(int i = 0; i < n; i++) {
+        int x,y;
+        cin >> x >> y;
+        poligono.push_back(Point(x,y));
+    }
+    int m;
+    cin >> m;
+    for(int i = 0; i < m; i++) {
+        int x,y;
+        cin >> x >> y;
+        Point P(x,y);
+        if(pointInConvex(poligono,P)) {
+            cout << "inside" << endl;
+        } else {
+            cout << "outside" << endl;
+        }
+    }
     return 0;
 }
