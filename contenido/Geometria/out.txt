@@ -1,6 +1,6 @@
-Network 1
-The bandwidth is 25.
-Network 2
-The bandwidth is 28.
-Network 3
-The bandwidth is 28.
+inside
+inside
+inside
+inside
+outside
+outside
