@@ -8,7 +8,7 @@ int tamanhoVector;
 
 void update(int posicion, int valor ) {
     for(;posicion <= tamanhoVector ;posicion += posicion&-posicion) {
-        BIT[posicion] *= valor;
+        BIT[posicion] += valor;
     }
 }
 // [2,3,7,1,5]
